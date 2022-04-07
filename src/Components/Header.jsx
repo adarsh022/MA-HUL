@@ -3,6 +3,12 @@ import { Nav, Navbar, Container, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  function refreshPage() {
+    // setTimeout(() => {
+    window.location.reload(false);
+    // }, 500);
+    console.log('page to reload');
+  }
   return (
     <div className='Header'>
       <Navbar
@@ -21,7 +27,7 @@ export default function Header() {
             <Nav className='me-auto'>
               <Link to='IPWhitelist'>
                 <Nav.Link href='#IPWhitelist'>IP Whitelist</Nav.Link>
-              </Link>
+              </Link>{' '}
               <Nav.Link href='#NERL'>
                 <a target='_blank' href='https://nerlindia.com/'>
                   NERL
@@ -64,10 +70,8 @@ export default function Header() {
             </Nav>
 
             <Nav>
-              <Nav.Link href='#deets'>
-                <a target='_blank' href='https://adarsh022.github.io'>
-                  {/* आदर्श पाण्डेय */}
-                </a>
+              <Nav.Link href='#Refresh' onClick={refreshPage}>
+                Refresh
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>
