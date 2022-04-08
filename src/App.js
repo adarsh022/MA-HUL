@@ -17,9 +17,9 @@ export default function App() {
         <Route path='/Servers_25-50' element={<HUL from='25' till='26' />} />
         <Route path='/Servers_50-75' element={<HUL from='50' till='26' />} />
         <Route path='/Servers_75-100' element={<HUL from='75' till='26' />} />
-        <Route path='/Servers_100-127' element={<HUL from='100' till='28' />} />
-        <Route path='/All_127' element={<HUL from='1' till='127' />} />
-        <Route path='*' element={<Error />} />
+        <Route path='/Servers_100-129' element={<HUL from='100' till='30' />} />
+        <Route path='/All_129' element={<HUL from='1' till='129' />} />
+        <Route path='/*' element={<Error />} />
       </Routes>
     </div>
   );

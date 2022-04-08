@@ -1,15 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 export default function HUL({ from, till }) {
   let list = Array.from({ length: till }, (_, i) => i + Number(from));
   console.log(list);
-  let count = 0;
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     window.location.reload(false);
-  //   }, 10000);
-  // }, []);
 
   return (
     <div className='HUL'>
@@ -19,16 +12,17 @@ export default function HUL({ from, till }) {
             target='_blank'
             href={`https://leveredge${item}.hulcd.com/rsunify/`}
           >
-            <p>{`leveredge${item}.hulcd.com/rsunify/`}</p>
+            <p>{`app${item}`}</p>
+            <iframe
+              sandbox
+              key={item}
+              scrolling='no'
+              src={`https://leveredge${item}.hulcd.com/rsunify/`}
+              frameBorder='no'
+              loading='eager'
+              title={`app server ${item}`}
+            ></iframe>
           </a>
-
-          <iframe
-            key={item}
-            src={`https://leveredge${item}.hulcd.com/rsunify/`}
-            frameBorder='no'
-            loading='eager'
-            title={`app server ${item}`}
-          ></iframe>
         </div>
       ))}
     </div>
